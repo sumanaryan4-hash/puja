@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>राजा प्रियंवद की छठ कथा - Chhath Puja Story</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Nirmala UI', 'Mangal', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f8f6f0 0%, #e8e2d0 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3c72 100%);
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header h1 {
+            font-size: 3.8rem;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .header p {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero-section {
+            width: 100%;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+            position: relative;
+        }
+
+        .hero-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-section:hover img {
+            transform: scale(1.05);
+        }
+
+        .content-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 50px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #e9ecef;
+        }
+
+        .section-title {
+            color: #2c5aa0;
+            font-size: 2.5rem;
+            margin-bottom: 35px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, #2c5aa0, #4a90e2);
+            border-radius: 2px;
+        }
+
+        .content-text {
+            font-size: 1.25rem;
+            text-align: justify;
+            margin-bottom: 25px;
+            line-height: 1.9;
+            color: #495057;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            color: #1976d2;
+        }
+
+        .timeline-wrapper {
+            margin: 60px 0;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #2c5aa0, #4a90e2);
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            margin: 50px 0;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 30px;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 30px;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            width: 45%;
+            position: relative;
+            border-left: 5px solid #2c5aa0;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            border-left: none;
+            border-right: 5px solid #4a90e2;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            background: #2c5aa0;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px #2c5aa0;
+            z-index: 2;
+        }
+
+        .timeline-title {
+            color: #2c5aa0;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .timeline-text {
+            color: #495057;
+            line-height: 1.7;
+        }
+
+        .deity-section {
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3c72 100%);
+            color: white;
+            border-radius: 20px;
+            margin: 50px 0;
+        }
+
+        .deity-title {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: #ffd54f;
+        }
+
+        .deity-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 20px;
+            margin-top: 60px;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.8rem;
+            }
+            
+            .header p {
+                font-size: 1.2rem;
+            }
+            
+            .content-card {
+                padding: 30px 20px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .content-text {
+                font-size: 1.1rem;
+            }
+            
+            .timeline-content {
+                width: 85%;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                justify-content: flex-start;
+                padding-right: 0;
+                padding-left: 60px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                justify-content: flex-start;
+                padding-left: 60px;
+            }
+            
+            .timeline-dot {
+                left: 30px;
+            }
+        }
+
+        .quote {
+            font-style: italic;
+            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #ff9800;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: 1.4rem;
+            color: #e65100;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>राजा प्रियंवद की छठ कथा</h1>
+            <p>संतान सुख और दैवीय कृपा की अमर गाथा</p>
+        </header>
+
+        <div class="hero-section">
+            <img src="RP1.jpg" alt="Ancient Indian king Priyavrat performing rituals with priests in traditional Vedic ceremony with fire and offerings" />
+        </div>
+
+        <section class="content-card">
+            <h2 class="section-title">पौराणिक महत्व</h2>
+            <p class="content-text">
+                राजा प्रियंवद की कथा भारतीय पुराणों में एक महत्वपूर्ण स्थान रखती है, जो <span class="highlight">छठ पूजा</span> के पीछे की धार्मिक मान्यता को स्पष्ट करती है। यह कथा न केवल धार्मिक आस्था का प्रतीक है, बल्कि यह मातृत्व और संतान सुख की प्राप्ति के लिए की जाने वाली तपस्या का भी उदाहरण प्रस्तुत करती है।
+            </p>
+        </section>
+
+        <div class="timeline-wrapper">
+            <h2 class="section-title">कथा का क्रम</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">संतान की आकांक्षा</h3>
+                        <p class="timeline-text">राजा प्रियंवद एक समृद्ध और शक्तिशाली राजा थे, लेकिन उनके जीवन में संतान सुख की कमी थी। इस दुख को दूर करने के लिए उन्होंने महर्षि कश्यप से सहायता मांगी।</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">यज्ञ की आहुति</h3>
+                        <p class="timeline-text">महर्षि कश्यप ने यज्ञ का आयोजन किया और यज्ञ की आहुति के लिए बनाई खीर रानी मालिनी को दी गई, जिससे उन्हें गर्भधारण हुआ।</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">पुत्र वियोग का दुःख</h3>
+                        <p class="timeline-text">रानी ने मृत पुत्र को जन्म दिया, जिससे राजा गहरे दुख में डूब गए और श्मशान में अपने प्राण त्यागने का निर्णय लिया।</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">देवी षष्ठी का प्रकट होना</h3>
+                        <p class="timeline-text">तभी भगवान ब्रह्मा की मानस पुत्री प्रकट हुईं और अपने परिचय में कहा कि वे सृष्टि के छठे अंश से उत्पन्न षष्ठी देवी हैं।</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">दैवीय आशीर्वाद</h3>
+                        <p class="timeline-text">देवी ने राजा को अपनी पूजा करने और दूसरों को प्रेरित करने का आदेश दिया, जिससे उन्हें दुख से मुक्ति मिलेगी।</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">पूजा और फल</h3>
+                        <p class="timeline-text">राजा ने देवी षष्ठी का व्रत किया और भक्ति से पुत्र रत्न की प्राप्ति हुई, जिससे छठ पूजा की परंपरा शुरू हुई।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="deity-section">
+            <h2 class="deity-title">देवी षष्ठी का महत्व</h2>
+            <p class="deity-text">
+                देवी षष्ठी को संतानों की रक्षक और कल्याणकारी देवी माना जाता है। वे बच्चों के स्वास्थ्य, दीर्घायु और सुख-समृद्धि के लिए पूजी जाती हैं। छठ पूजा में सूर्य देव के साथ-साथ देवी षष्ठी की भी विशेष पूजा की जाती है।
+            </p>
+        </section>
+
+        <div class="quote">
+            <p class="quote-text">
+                "राजन, तुम मेरी पूजा करो और दूसरों को भी प्रेरित करो, तो तुम्हें इस दुख से मुक्ति मिल जाएगी।"
+            </p>
+        </div>
+
+        <section class="content-card">
+            <h2 class="section-title">छठ पूजा की परंपरा</h2>
+            <p class="content-text">
+                राजा प्रियंवद की कथा से यह स्पष्ट होता है कि देवी षष्ठी की पूजा संतान सुख की प्राप्ति के लिए अत्यंत महत्वपूर्ण है। तभी से <span class="highlight">छठी मैया</span> की पूजा का यह पर्व मनाया जाने लगा। यह पर्व न केवल संतान सुख की प्राप्ति के लिए है, बल्कि यह मातृत्व की महत्ता और देवी की कृपा को भी दर्शाता है।
+            </p>
+            
+            <p class="content-text">
+                छठ पूजा के दौरान, भक्तजन विशेष रूप से सूर्य देव और देवी षष्ठी की पूजा करते हैं, ताकि उन्हें संतान सुख और समृद्धि की प्राप्ति हो सके। यह पर्व आज भी श्रद्धा और भक्ति के साथ मनाया जाता है, और यह भारतीय संस्कृति का एक अभिन्न हिस्सा बन चुका है।
+            </p>
+        </section>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="RP2.jpg" alt="Traditional Chhath Puja ceremony with devotees offering prayers to setting sun at river bank" />
+                <div class="gallery-caption">छठ पूजा का दृश्य</div>
+            </div>
+            <div class="gallery-item">
+                <img src="RP4.jpg" alt="Ancient Vedic yajna ceremony with priests performing rituals around sacred fire" />
+                <div class="gallery-caption">यज्ञ अनुष्ठान</div>
+            </div>
+            <div class="gallery-item">
+                <img src="RP3.jpg" alt="Devotees making offerings of fruits and traditional sweets during Chhath festival" />
+                <div class="gallery-caption">पूजा सामग्री</div>
+            </div>
+        </div>
+
+        <!-- ====== Footer Start ====== -->
+<footer class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gray-300 py-8 relative overflow-hidden">
+  <div class="container mx-auto px-4">
+
+    <!-- Top Section Center -->
+    <div class="text-center">
+      <!-- Logo / Branding -->
+      <h2 class="text-2xl sm:text-3xl font-bold text-green-400 mb-3">SKZBlog</h2>
+
+      <!-- Live Date & Time in Hindi -->
+      <p id="datetime" class="mb-6 text-sm sm:text-base text-gray-400"></p>
+    </div>
+
+    <!-- Social Icons as Buttons -->
+    <div class="flex justify-center flex-wrap gap-4 mb-6">
+      <a href="https://x.com/sumansauravkss" target="_blank" 
+         class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <i class="fab fa-x-twitter text-xl"></i> X (Twitter)
+      </a>
+
+      <a href="https://www.linkedin.com/in/suman-saurav-503524265/" target="_blank" 
+         class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <i class="fab fa-linkedin text-xl"></i> LinkedIn
+      </a>
+
+      <a href="https://www.facebook.com/Zack387" target="_blank" 
+         class="flex items-center gap-2 bg-blue-700 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <i class="fab fa-facebook text-xl"></i> Facebook
+      </a>
+
+      <a href="https://www.instagram.com/suman__saurav_902" target="_blank" 
+         class="flex items-center gap-2 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white px-4 py-2 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <i class="fab fa-instagram text-xl"></i> Instagram
+      </a>
+    </div>
+
+    <!-- Bottom Section with Copyright + Back to Top -->
+    <div class="flex justify-between items-center mt-6 border-t border-gray-700 pt-4 text-sm sm:text-base text-gray-400">
+      <p>
+        © <span id="year"></span> Managed & Developed by 
+        <span class="font-semibold text-green-400">Suman Saurav</span>
+      </p>
+
+      <!-- Back to Top Button (Inside Footer Right) -->
+      <button id="backToTop" class="bg-green-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-green-600 hover:scale-105 transition-all duration-300" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<!-- FontAwesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Scripts -->
+<script>
+  // Auto Year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Live Date & Time in Hindi
+  function updateDateTime() {
+    const now = new Date();
+    const options = { 
+      weekday: 'long', year: 'numeric', month: 'long', 
+      day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit',
+      hour12: true
+    };
+    document.getElementById("datetime").textContent = now.toLocaleString('hi-IN', options);
+  }
+  setInterval(updateDateTime, 1000);
+  updateDateTime();
+
+  // Back to Top Button Click Action
+  document.getElementById("backToTop").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
